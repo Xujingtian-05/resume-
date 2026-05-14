@@ -25,21 +25,49 @@
             border-radius: 12px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
         }
-        h1 {
-            text-align: center;
-            color: #2c3e50;
+        /* 头部个人信息+照片区域 */
+        .header {
+            display: flex;
+            gap: 30px;
+            align-items: center;
             margin-bottom: 30px;
             border-bottom: 2px solid #409eff;
-            padding-bottom: 10px;
+            padding-bottom: 20px;
+        }
+        .photo-box {
+            width: 140px;
+            height: 180px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #f5f7fa;
+            color: #999;
+            font-size: 14px;
+            text-align: center;
+        }
+        .photo-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+        .info-main h1 {
+            color: #2c3e50;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .info-row {
+            margin: 6px 0;
+            font-size: 15px;
         }
         h2 {
             color: #333;
             margin: 25px 0 12px;
             padding-left: 8px;
             border-left: 4px solid #409eff;
-        }
-        .info-row {
-            margin: 8px 0;
+            font-size: 20px;
         }
         table {
             width: 100%;
@@ -62,13 +90,22 @@
 </head>
 <body>
     <div class="container">
-        <h1>徐靖添｜个人在线简历</h1>
-
-        <h2>基本信息</h2>
-        <div class="info-row">姓名：徐靖添</div>
-        <div class="info-row">所在城市：江苏苏州</div>
-        <div class="info-row">电子邮箱：请填写你的邮箱</div>
-        <div class="info-row">联系电话：请填写你的手机号</div>
+        <!-- 头部：照片 + 个人信息 -->
+        <div class="header">
+            <!-- 照片区域：直接替换src为你的照片即可 -->
+            <div class="photo-box">
+                <!-- 把下面注释去掉，替换成你的照片地址 -->
+                <!-- <img src="你的证件照.jpg" alt="个人证件照"> -->
+                此处粘贴<br>个人证件照
+            </div>
+            <div class="info-main">
+                <h1>徐靖添｜个人在线简历</h1>
+                <div class="info-row">📞 联系电话：13732650085</div>
+                <div class="info-row">📧 电子邮箱：13732540085@163.com</div>
+                <div class="info-row">📍 所在城市：江苏苏州</div>
+                <div class="info-row">🎯 求职意向：医疗器械/智能医学/算法相关岗位</div>
+            </div>
+        </div>
 
         <h2>教育背景</h2>
         <table>
@@ -78,11 +115,7 @@
             </tr>
             <tr>
                 <td>专业</td>
-                <td>智能医学工程</td>
-            </tr>
-            <tr>
-                <td>学历层次</td>
-                <td>全日制本科</td>
+                <td>智能医学工程（全日制本科）</td>
             </tr>
             <tr>
                 <td>预计毕业时间</td>
@@ -104,8 +137,8 @@
 
         <h2>语言能力</h2>
         <ul>
-            <li>英语：托福首考83–88分（口语3.5，写作3.0，阅读4.0+，听力4.0+）；CET‑4、CET‑6已通过</li>
-            <li>日语：持有JLPT N2证书，具备阅读专业文献和日常学术交流能力</li>
+            <li><strong>英语</strong>：托福首考83–88分（口语3.5，写作3.0，阅读4.0+，听力4.0+）；已通过CET‑4、CET‑6，具备专业文献读写、日常沟通能力</li>
+            <li><strong>日语</strong>：持有JLPT N2证书，可阅读医学/人工智能类专业文献，开展基础学术交流</li>
         </ul>
 
         <h2>科研经历与学术成果</h2>
@@ -114,15 +147,15 @@
             <li>论文标题：<i>From Traditional to Deep Learning‑Based SLAM Algorithm Research</i></li>
             <li>发表信息：Big Data and Artificial Intelligence, Vol. 6, Issue 5, pp. 111‑114 (2025)，新加坡协同出版社</li>
             <li>作者信息：徐靖添，杨婷（导师，合作作者）</li>
-            <li>个人贡献：在导师指导下完成文献检索、分类梳理与论文撰写。系统分析了从传统SLAM到深度学习SLAM的技术演进，归纳了CNN、Transformer等模型在特征提取与位姿估计中的应用现状。</li>
+            <li>个人贡献：独立完成文献检索、分类梳理与全文撰写；系统梳理传统SLAM到深度学习SLAM技术演进，总结CNN、Transformer模型在特征提取、位姿估计中的应用，具备扎实的科研调研与学术写作能力</li>
             <li class="publish">标注状态：已发表（Published）</li>
         </ul>
 
         <h2>技能亮点</h2>
         <ul>
-            <li>医学+人工智能交叉学科背景，熟悉SLAM、深度学习基础理论</li>
-            <li>具备文献调研、学术论文撰写、科研成果整理能力</li>
-            <li>可独立完成个人简历网站部署、网页上线维护</li>
+            <li>交叉学科背景：医学+人工智能，熟悉SLAM、深度学习基础，适配智能医疗、医学影像相关方向</li>
+            <li>科研能力：具备文献调研、学术论文撰写、成果整理输出能力</li>
+            <li>工程实践：独立完成个人简历网站开发与GitHub Pages部署，掌握基础网页部署、线上发布流程</li>
         </ul>
     </div>
 </body>
